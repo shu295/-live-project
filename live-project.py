@@ -47,7 +47,6 @@ root.mainloop()                 # 进入消息循环
 
 
 import numpy
-import operator
 def delete(arr,c):
     s=0
     if len(arr)==0 :
@@ -80,6 +79,21 @@ def display(s):
     #排序函数
     for i in range(len(s)):
         print(s[i])
+        
+        
+
+import numpy
+s =input()
+s =s.split(",")
+def count1(s):
+    count=0
+    for i in range(len(s)):
+        for j in range(4):
+            if s[i][3]==null:
+                count +=1
+    return count
+print("当前离校人数为"，count1(s))
+print("当前在校人数为"，len(s)-count1(s))
 def sort1(s):
     result = sorted(s,key=operator.itemgetter(0))
     for i in range(len(s)):
