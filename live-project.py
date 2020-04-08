@@ -27,3 +27,7 @@ def deng(num,name):
     if flag==0:#没有则添加
         s.append((num,name,datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),))
 deng(211706126,'www')
+def display(s):
+    #排序函数
+    for i in range(len(s)):
+        print(s[i])
