@@ -28,10 +28,11 @@ def deng(num,name,time1,time2):
         return '已登记'
     else:
         return '该同学还在学校'
-
+    
+    
+#显示学生信息
 def display(s):
-    #排序函数
-    sort1(s)
+    sort1(s)  #排序函数
     for i in range(len(s)):
         print(s[i])
 #离校人数
