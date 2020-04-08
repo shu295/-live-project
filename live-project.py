@@ -65,6 +65,6 @@ print("当前在校人数为"，len(s)-count1(s))
 
 def time_filter(s,st,et):  #通过时间段查找
     for i in range(len(s)):
-        if (s[i][2]>st):
-            if (s[i][2]<et):
+        if (s[i][2]>st):  #开始时间
+            if (s[i][2]<et):  #末尾时间
                 print(s[i])
