@@ -1,5 +1,6 @@
 import numpy
 import operator
+#删除
 def delete(arr,c):
     s=0
     if len(arr)==0 :
@@ -13,7 +14,7 @@ def delete(arr,c):
         return '还未添加此记录'
     else:
         return arr
-    
+#登记    
 import time
 import datetime
 def deng(num,name,time1,time2):  
@@ -33,9 +34,7 @@ def display(s):
     sort1(s)
     for i in range(len(s)):
         print(s[i])
-
-        
-
+#离校人数
 s =input()
 s =s.split(",")
 def count1(s):
