@@ -36,17 +36,17 @@ def display(s):
     for i in range(len(s)):
         print(s[i])
 #离校人数
-s =input()
-s =s.split(",")
+import numpy
 def count1(s):
     count=0
     for i in range(len(s)):
-        for j in range(4):
-            if s[i][3]==null:
-                count +=1
+        if len(s[i][3])==0:
+            count +=1
     return count
-print("当前离校人数为"，count1(s))
-print("当前在校人数为"，len(s)-count1(s))
+print("当前在校的人数为",len(s)-count1(s))
+print("当前离校的人数为",count1(s))
+
+
 def sort1(s):
     result = sorted(s,key=operator.itemgetter(0))
     for i in range(len(s)):
@@ -71,13 +71,4 @@ def research(x):
   
             
             
-            
-import numpy
-def count1(s):
-    count=0
-    for i in range(len(s)):
-        if len(s[i][3])==0:
-            count +=1
-    return count
-print("当前在校的人数为",len(s)-count1(s))
-print("当前离校的人数为",count1(s))
+        
