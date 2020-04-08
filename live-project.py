@@ -17,20 +17,28 @@ def delete(arr,c):
 #登记    
 import time
 import datetime
-def deng(num,name,time1,time2):  
+s=[]
+def deng(num,name,s):  
     flag=0
-    t1=time1
+    n=0
     for i in range(len(s)):
-        if (s[i][0]==num) & (s[i][3]==''): #判断列表里面有没有此学号且没有写离开时间       
+        if (s[i][0]==num): #判断列表里面有没有此学号      
             flag=1#如果有则变为1
+            if(len(s[i])==4):
+                n=1
+            else:
+                n=0
+    if flag==1:
+        if n==1:
+            s.append((num,name,datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),))
+        else:
+            return '该同学在校园内'
     if flag==0:#没有则添加
-        s.append((num,name,t1,time2))
-        return '已登记'
-    else:
-        return '该同学还在学校'
-    
+        s.append((num,name,datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),))
+        return '登记成功'
 
-def lixiao(arr,c):#添加离校时间
+#添加离校时间        
+def lixiao(arr,c):
     a=[]
     res_list = [x[0] for x in arr]#获取学号
     for i in range(0,len(res_list)):#查找学号下标
