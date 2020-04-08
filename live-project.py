@@ -55,8 +55,8 @@ def sort1(s):
         
 def time_filter(s,st,et):
     for i in range(len(s)):
-        if (s[i][2]>st):
-            if (s[i][2]<et):
+        if (s[i][2]>st):  #开始时间
+            if (s[i][2]<et):  #末尾时间
                 print(s[i])
 
 def research(x):
