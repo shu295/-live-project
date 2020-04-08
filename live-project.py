@@ -32,6 +32,7 @@ def display(s):
     #排序函数
     for i in range(len(s)):
         print(s[i])
+        
 def sort1(s):
     result = sorted(s,key=operator.itemgetter(0))
     for i in range(len(s)):
