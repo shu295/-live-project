@@ -62,5 +62,10 @@ def research(x):
     for i in range(0,len(a)):
         if x==a[i][0]:
             print("学号:%d, 姓名:%s, 进校时间:%s, 离校时间:%s"%(a[i][0],a[i][1],a[i][2],a[i][3]))
+        flag=1
+    if flag==0:
+        print("未查询到相关信息")
+                
+       
    
 
