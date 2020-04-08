@@ -30,6 +30,7 @@ def deng(num,name):
 deng(211706126,'www')
 def display(s):
     #排序函数
+    sort1(s)
     for i in range(len(s)):
         print(s[i])
 def sort1(s):
