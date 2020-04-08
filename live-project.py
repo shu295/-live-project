@@ -1,4 +1,5 @@
 import numpy
+import operator
 def delete(arr,c):
     s=0
     if len(arr)==0 :
@@ -32,6 +33,7 @@ def display(s):
     sort1(s)
     for i in range(len(s)):
         print(s[i])
+
         
 
 s =input()
@@ -49,19 +51,17 @@ def sort1(s):
     result = sorted(s,key=operator.itemgetter(0))
     for i in range(len(s)):
         print(result[i],'\n')
+
+        
+def time_filter(s,st,et):
+    for i in range(len(s)):
+        if (s[i][2]>st):
+            if (s[i][2]<et):
+                print(s[i])
+
 def research(x):
     for i in range(0,len(a)):
         if x==a[i][0]:
             print("学号:%d, 姓名:%s, 进校时间:%s, 离校时间:%s"%(a[i][0],a[i][1],a[i][2],a[i][3]))
    
-s =input()
-s =s.split(",")
-def count1(s):
-    count=0
-    for i in range(len(s)):
-        for j in range(4):
-            if s[i][3]==null:
-                count +=1
-    return count
-print("当前离校人数为"，count1(s))
-print("当前在校人数为"，len(s)-count1(s))
+
