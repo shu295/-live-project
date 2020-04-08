@@ -29,8 +29,19 @@ def deng(num,name,time1,time2):
     else:
         return '该同学还在学校'
     
-    
-#显示学生信息
+
+def lixiao(arr,c):#添加离校时间
+    a=[]
+    res_list = [x[0] for x in arr]#获取学号
+    for i in range(0,len(res_list)):#查找学号下标
+        if res_list[i]==c:
+            a=arr[i]
+            arr.pop(i)
+            b= list(a)#将元祖转换成列表
+            b.append(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+            arr.append(b)
+    return arr
+
 def display(s):
     sort1(s)  #排序函数
     for i in range(len(s)):
