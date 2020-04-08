@@ -80,9 +80,7 @@ def display(s):
     for i in range(len(s)):
         print(s[i])
         
-        
 
-import numpy
 s =input()
 s =s.split(",")
 def count1(s):
