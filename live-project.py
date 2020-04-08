@@ -1,4 +1,5 @@
 import numpy
+import operator
 def delete(arr,c):
     s=0
     if len(arr)==0 :
